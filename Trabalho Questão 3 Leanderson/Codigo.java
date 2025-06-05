@@ -15,6 +15,7 @@ class Produto {
 }
 
 
+class Livro extends Produto {
     private String autor;
     private int numeroPaginas;
     private boolean capaDura;
