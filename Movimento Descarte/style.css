@@ -1,5 +1,15 @@
+/* ==========================================================================
+   1. GLOBAIS E CONFIGURAÇÕES BASE
+   ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+/* faz a pagina deslizar suavemente quando clica num link do menu */
+html {
+    scroll-behavior: smooth;
+    /* evita que a barra preta do menu cubra o titulo das secoes quando rolar */
+    scroll-padding-top: 80px; 
+}
 
 body {
     font-family: 'Inter', sans-serif;
@@ -7,19 +17,24 @@ body {
     color: #212529;
 }
 
+
+/* ==========================================================================
+   2. NAVBAR (CABEÇALHO PRINCIPAL)
+   ========================================================================== */
+
 .custom-navbar {
     background-color: #121212;
     padding: 15px 0;
 }
 
-/* estilizando a logo  para nao ficar gigante */
+/* estilizando a logo para nao ficar gigante */
 .logo-img {
     max-height: 50px; 
     width: auto; 
     transition: 0.3s ease;
 }
 
-/* hover pra escurecer quando passa o mouse */
+/* hover pra escurecer levemente a logo quando passa o mouse */
 .logo-img:hover {
     opacity: 0.8;
 }
@@ -35,14 +50,19 @@ body {
     color: #00ff88 !important;
 }
 
-/* borda no ultimo botao pra chamar atenção */
+/* borda no ultimo botao pra chamar atenção e virar um "call to action" */
 .btn-sugerir {
     border: 1px solid #00ff88;
     border-radius: 4px;
     padding: 5px 15px !important;
 }
 
-/* conteiner  do video */
+
+/* ==========================================================================
+   3. HERO SECTION (VÍDEO DE FUNDO E TEXTO PRINCIPAL)
+   ========================================================================== */
+
+/* conteiner principal do video */
 .hero-video-section {
     position: relative;
     width: 100%;
@@ -51,10 +71,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 60px; 
+    padding-bottom: 0; /* zerado pq tiramos a barra de busca flutuante */
 }
 
-
+/* configuracao do video pra cobrir tudo sem amassar */
 #bg-video {
     position: absolute;
     top: 50%;
@@ -68,6 +88,7 @@ body {
     object-fit: cover;
 }
 
+/* pelicula escura em cima do video */
 .video-overlay {
     position: absolute;
     top: 0;
@@ -78,7 +99,7 @@ body {
     z-index: 2;
 }
 
-
+/* o texto flutuando na frente do video */
 .hero-content {
     position: relative;
     z-index: 3;
@@ -97,7 +118,7 @@ body {
     font-size: 1.15rem;
 }
 
-
+/* botao verde neon de destaque */
 .custom-btn {
     background-color: #00ff88;
     color: #121212;
@@ -112,9 +133,13 @@ body {
     transform: translateY(-2px); 
 }
 
-/* --- SEÇÃO DO MAPA --- */
+
+/* ==========================================================================
+   4. SEÇÃO DO MAPA DE COLETA
+   ========================================================================== */
+
 .map-section {
-    background-color: #f8f9fa; /* Um cinza bem clarinho pra contrastar com o topo escuro */
+    background-color: #f8f9fa; /* cinza clarinho pra dar contraste com o video */
     color: #212529;
 }
 
@@ -125,18 +150,18 @@ body {
 }
 
 .text-success-neon {
-    color: #00b35f; /* Um verde um pouco mais escuro pro fundo claro */
+    color: #00b35f; /* verde ligeiramente mais escuro pra ler bem no fundo branco */
     font-weight: 700;
 }
 
-/* Lista de locais rolável */
+/* lista rolável dos ecopontos (lado esquerdo do mapa) */
 .locations-list {
     max-height: 450px;
     overflow-y: auto;
     padding-right: 10px;
 }
 
-/* Estilizando a barra de rolagem da lista */
+/* barra de rolagem customizada da lista */
 .locations-list::-webkit-scrollbar {
     width: 6px;
 }
@@ -145,10 +170,10 @@ body {
     border-radius: 4px;
 }
 
-/* Cards de Ecoponto */
+/* cards de cada local na lista */
 .location-card {
     border: none;
-    border-left: 4px solid #00cc6a;
+    border-left: 4px solid #00cc6a; /* detalhe verde na lateral */
     transition: 0.3s ease;
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
@@ -160,7 +185,7 @@ body {
     box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
 
-/* Container do Mapa */
+/* conteiner que segura o iframe do google maps */
 .map-container {
     border-radius: 12px;
     overflow: hidden;
