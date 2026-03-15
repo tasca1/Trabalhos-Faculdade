@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+
+    <div class="d-flex" id="wrapper">
+        
+        <div class="sidebar-dark" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4 text-success-neon fw-bold fs-4">
+                [Admin]
+            </div>
+            
+            <div class="list-group list-group-flush mt-3">
+                <a href="#" id="link-pontos" class="list-group-item list-group-item-action bg-transparent text-white active-link">
+                    Pontos de coleta
+                </a>
+                <a href="#" id="link-mensagens" class="list-group-item list-group-item-action bg-transparent text-white">
+                    Mensagens
+                </a>
+                
+                <a href="index.html" class="list-group-item list-group-item-action bg-transparent text-danger mt-5">
+                    Sair do painel
+                </a>
+            </div>
+        </div>
+
+        <div id="page-content-wrapper" class="w-100">
+            
+            <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-4 py-3">
+                <div class="d-flex align-items-center">
+                    <span id="top-title" class="fs-5 fw-bold text-dark">Gerenciar pontos de coleta</span>
+                </div>
+            </nav>
+
+            <div id="sec-pontos" class="container-fluid px-4 py-5">
+                <div class="alert alert-warning text-center p-5 shadow-sm border-0" role="alert">
+                    <h4 class="alert-heading fw-bold mb-3">Aguardando Pontos de Coleta</h4>
+                    <p class="mb-0 text-muted">Nenhum ponto de coleta registrado.</p>
+                </div>
+            </div>
+
+            <div id="sec-mensagens" class="container-fluid px-4 py-5 d-none">
+                <div class="alert alert-info text-center p-5 shadow-sm border-0" role="alert" style="background-color: #e9f5fe;">
+                    <h4 class="alert-heading fw-bold mb-3 text-primary">Aguardando Mensagens</h4>
+                    <p class="mb-0 text-muted">Nada na caixa de mensagens por enquanto.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const linkPontos = document.getElementById('link-pontos');
+        const linkMensagens = document.getElementById('link-mensagens');
+        const secPontos = document.getElementById('sec-pontos');
+        const secMensagens = document.getElementById('sec-mensagens');
+        const topTitle = document.getElementById('top-title');
+
+        // quando clica em pontos de coleta
+        linkPontos.addEventListener('click', function(e) {
+            e.preventDefault();
+            secPontos.classList.remove('d-none');
+            secMensagens.classList.add('d-none');
+            linkPontos.classList.add('active-link');
+            linkMensagens.classList.remove('active-link');
+            topTitle.innerText = 'gerenciar pontos de coleta';
+        });
+
+        // quando clica em mensagens
+        linkMensagens.addEventListener('click', function(e) {
+            e.preventDefault();
+            secMensagens.classList.remove('d-none');
+            secPontos.classList.add('d-none');
+            linkMensagens.classList.add('active-link');
+            linkPontos.classList.remove('active-link');
+            topTitle.innerText = 'visualizar mensagens';
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
