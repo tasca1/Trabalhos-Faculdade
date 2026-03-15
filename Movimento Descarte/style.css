@@ -6,3 +6,40 @@ body {
     background-color: #f8f9fa;
     color: #212529;
 }
+
+/* estilo da barra de navegacao principal */
+.custom-navbar {
+    background-color: #121212;
+    padding: 15px 0;
+}
+
+/* estilizando a logo  para nao ficar gigante */
+.logo-img {
+    max-height: 50px; /* ajusta essa altura conforme seu logo ficar bom */
+    width: auto; /* mantem a proporcao pra nao achatar */
+    transition: 0.3s ease;
+}
+
+/* um efeitinho simples de opacidade quando passa o mouse */
+.logo-img:hover {
+    opacity: 0.8;
+}
+
+/* arrumando os links e colocando transicao suave no hover */
+.nav-link {
+    color: #f8f9fa !important;
+    margin-left: 15px;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #00ff88 !important;
+}
+
+/* deixando o ultimo botao com cara de call to action */
+.btn-sugerir {
+    border: 1px solid #00ff88;
+    border-radius: 4px;
+    padding: 5px 15px !important;
+}
