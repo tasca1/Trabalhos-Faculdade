@@ -111,3 +111,58 @@ body {
     color: #121212;
     transform: translateY(-2px); 
 }
+
+/* --- SEÇÃO DO MAPA --- */
+.map-section {
+    background-color: #f8f9fa; /* Um cinza bem clarinho pra contrastar com o topo escuro */
+    color: #212529;
+}
+
+.section-title {
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #121212;
+}
+
+.text-success-neon {
+    color: #00b35f; /* Um verde um pouco mais escuro pro fundo claro */
+    font-weight: 700;
+}
+
+/* Lista de locais rolável */
+.locations-list {
+    max-height: 450px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Estilizando a barra de rolagem da lista */
+.locations-list::-webkit-scrollbar {
+    width: 6px;
+}
+.locations-list::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+/* Cards de Ecoponto */
+.location-card {
+    border: none;
+    border-left: 4px solid #00cc6a;
+    transition: 0.3s ease;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+
+.location-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* Container do Mapa */
+.map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+}
