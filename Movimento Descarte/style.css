@@ -7,7 +7,6 @@ body {
     color: #212529;
 }
 
-/* estilo da barra de navegacao principal */
 .custom-navbar {
     background-color: #121212;
     padding: 15px 0;
@@ -15,17 +14,16 @@ body {
 
 /* estilizando a logo  para nao ficar gigante */
 .logo-img {
-    max-height: 50px; /* ajusta essa altura conforme seu logo ficar bom */
-    width: auto; /* mantem a proporcao pra nao achatar */
+    max-height: 50px; 
+    width: auto; 
     transition: 0.3s ease;
 }
 
-/* um efeitinho simples de opacidade quando passa o mouse */
+/* hover pra escurecer quando passa o mouse */
 .logo-img:hover {
     opacity: 0.8;
 }
 
-/* arrumando os links e colocando transicao suave no hover */
 .nav-link {
     color: #f8f9fa !important;
     margin-left: 15px;
@@ -37,9 +35,79 @@ body {
     color: #00ff88 !important;
 }
 
-/* deixando o ultimo botao com cara de call to action */
+/* borda no ultimo botao pra chamar atenção */
 .btn-sugerir {
     border: 1px solid #00ff88;
     border-radius: 4px;
     padding: 5px 15px !important;
+}
+
+/* conteiner  do video */
+.hero-video-section {
+    position: relative;
+    width: 100%;
+    height: 75vh; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px; 
+}
+
+
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 18, 18, 0.75); 
+    z-index: 2;
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-weight: 800;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    color: #e9ecef;
+    font-size: 1.15rem;
+}
+
+
+.custom-btn {
+    background-color: #00ff88;
+    color: #121212;
+    border: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #00cc6a;
+    color: #121212;
+    transform: translateY(-2px); 
 }
