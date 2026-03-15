@@ -191,3 +191,127 @@ body {
     overflow: hidden;
     height: 100%;
 }
+/* ==========================================================================
+   5. SEÇÃO DE RISCOS E EMBALAGEM
+   ========================================================================== */
+
+.risks-section {
+    background-color: #121212; /* voltando pro fundo escuro */
+    color: #ffffff;
+}
+
+.risks-section .section-title {
+    color: #ffffff; /* forca o titulo a ficar branco aqui */
+}
+
+/* cards com efeitinho de levantar quando passa o mouse */
+.risk-card {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.risk-card:hover {
+    transform: translateY(-10px);
+    border-color: #00ff88;
+}
+
+.text-light-gray {
+    color: #adb5bd;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.icon-text {
+    color: #555;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+}
+
+.package-banner {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0d2b1a 100%);
+    border-radius: 12px;
+}
+/* ==========================================================================
+   6. SEÇÃO DE FORMULÁRIO E RODAPÉ
+   ========================================================================== */
+
+/* fundo claro pra voltar pro efeito zebra */
+.contact-section {
+    background-color: #f8f9fa; 
+    color: #212529;
+}
+
+/* card flutuante do formulario */
+.form-card {
+    border: none;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+/* estilizando os inputs pra nao ficarem com a cara padrao do navegador */
+.form-control, .form-select {
+    background-color: #f1f3f5;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 10px 15px;
+}
+
+/* borda verde quando clica pra digitar */
+.form-control:focus, .form-select:focus {
+    border-color: #00ff88;
+    box-shadow: 0 0 0 0.2rem rgba(0, 255, 136, 0.25);
+    background-color: #ffffff;
+}
+
+.form-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+/* rodape escuro pra dar um peso no final da pagina */
+.footer-section {
+    background-color: #121212;
+    color: #adb5bd;
+}
+
+/* ==========================================================================
+   7. PAINEL ADMINISTRATIVO
+   ========================================================================== */
+
+.admin-body {
+    background-color: #f4f6f9;
+    overflow-x: hidden;
+}
+
+#wrapper {
+    min-height: 100vh;
+}
+
+.sidebar-dark {
+    min-width: 250px;
+    max-width: 250px;
+    background-color: #121212;
+    border-right: 1px solid #2a2a2a;
+}
+
+.sidebar-dark .list-group-item {
+    border: none;
+    padding: 15px 25px;
+    transition: 0.3s ease;
+}
+
+.sidebar-dark .list-group-item:hover {
+    background-color: #1a1a1a;
+    color: #00ff88 !important;
+    padding-left: 30px; 
+}
+
+.active-link {
+    border-left: 4px solid #00ff88 !important;
+    background-color: #1a1a1a !important;
+    color: #00ff88 !important;
+}

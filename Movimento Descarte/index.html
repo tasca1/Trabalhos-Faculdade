@@ -29,8 +29,8 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
                     <li class="nav-item"><a class="nav-link" href="#mapa">Mapa de coleta</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Riscos</a></li>
-                    <li class="nav-item"><a class="nav-link btn-sugerir" href="#">Sugerir local</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#risco">Riscos</a></li>
+                    <li class="nav-item"><a class="nav-link btn-sugerir" href="#contato">Sugerir local</a></li>
                 </ul>
             </div>
         </div>
@@ -45,7 +45,7 @@
         <div class="container hero-content">
             <div class="row justify-content-center">
                 <div class="col-md-8 text-center">
-                    <h1>O lixo eletrônico não desaparece. Ele contamina.<h1>
+                    <h1>O lixo eletrônico não desaparece. Ele contamina.</h1>
                     <p class="mt-3">Pilhas e placas não pertencem ao lixo comum. Elas liberam resíduos tóxicos no planeta todos os dias. Proteja o futuro, encontre o ponto de descarte agora.</p>
                     <a href="#mapa" class="btn btn-lg custom-btn mt-3">Encontrar Ponto de Coleta</a>
                 </div>
@@ -104,7 +104,128 @@
             </div>
         </div>
     </section>
+    <section id="riscos" class="risks-section py-5">
+        <div class="container mt-5 mb-5">
+            <div class="text-center mb-5">
+                <h2 class="section-title text-white">O Perigo Invisível</h2>
+                <p class="text-off-white">Entenda por que o seu lixo eletrônico não pode ir para a lixeira comum.</p>
+            </div>
 
+            <div class="row g-4">
+                
+                <div class="col-md-4">
+                    <div class="card risk-card h-100 shadow-lg">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-text mb-3">[ CONTAMINAÇÃO DO SOLO ]</div>
+                            <h4 class="text-success-neon">Metais Pesados</h4>
+                            <p class="text-light-gray mt-3">Componentes contendo chumbo, mercúrio e cádmio envenenam a terra e prejudicam o ecossistema local por dezenas de anos se descartados incorretamente.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card risk-card h-100 shadow-lg">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-text mb-3">[ POLUIÇÃO DA ÁGUA ]</div>
+                            <h4 class="text-success-neon">Lençóis Freáticos</h4>
+                            <p class="text-light-gray mt-3">Quando expostos à chuva e sol em aterros comuns, os químicos das baterias vazam, atingindo a água subterrânea que eventualmente chega às torneiras.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card risk-card h-100 shadow-lg">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-text mb-3">[ SAÚDE PÚBLICA ]</div>
+                            <h4 class="text-success-neon">Danos ao Corpo</h4>
+                            <p class="text-light-gray mt-3">A inalação de gases tóxicos gerados pela queima ou decomposição irregular de placas e fios afeta diretamente os sistemas respiratório e nervoso.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="package-banner p-4 p-md-5 text-center shadow">
+                        <h4 class="text-white mb-3">Vai descartar? Embale com segurança.</h4>
+                        <ul class="list-unstyled text-light-gray mb-0 mx-auto" style="max-width: 650px; text-align: left;">
+                            <li class="mb-3">
+                                <strong class="text-success-neon">1.</strong> Isole contatos de baterias estufadas com fita adesiva para evitar curtos.
+                            </li>
+                            <li class="mb-3">
+                                <strong class="text-success-neon">2.</strong> Coloque telas e vidros quebrados em caixas de papelão bem sinalizadas.
+                            </li>
+                            <li>
+                                <strong class="text-success-neon">3.</strong> Nunca misture lixo tecnológico com lixo orgânico da cozinha.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <section id="contato" class="contact-section py-5">
+        <div class="container mt-4 mb-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card form-card shadow-lg">
+                        <div class="card-body p-4 p-md-5">
+                            
+                            <h3 class="section-title text-center mb-2">Fale com a gente</h3>
+                            <p class="text-center text-muted mb-4">Solicite a coleta de grandes volumes ou denuncie o descarte irregular na sua região.</p>
+                            
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Seu nome completo</label>
+                                        <input type="text" class="form-control" >
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">E-mail ou Telefone</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    
+                                    <div class="col-12 mt-4">
+                                        <label class="form-label">Qual é o motivo do contato?</label>
+                                        <select class="form-select">
+                                            <option selected>Escolha uma opção...</option>
+                                            <option value="1">Solicitar coleta de itens de grande porte</option>
+                                            <option value="2">Denunciar descarte irregular</option>
+                                            <option value="3">Sugerir um novo ponto de coleta</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="col-12 mt-3">
+                                        <label class="form-label">Descrição ou endereço</label>
+                                        <textarea class="form-control" rows="3"></textarea>
+                                    </div>
+                                    
+                                    <div class="col-12 mt-3">
+                                        <label class="form-label">Anexar imagem (opcional)</label>
+                                        <input class="form-control" type="file" id="formFile">
+                                        <div class="form-text small">Envie uma foto do local ou do material.</div>
+                                    </div>
+                                    
+                                    <div class="col-12 mt-5 text-center">
+                                        <button type="submit" class="btn custom-btn btn-lg w-100">Enviar solicitação</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section text-center py-4">
+        <div class="container">
+            <p class="mb-0 text-white">&copy; 2026 Movimento Descarte Correto. Todos os direitos reservados.</p>
+            <p class="small text-white mt-1">Desenvolvido para um futuro mais limpo | <a href="login.html" class="text-white" style="text-decoration: none;">Entrar em área restrita</a></p>
+        </div>
+    </footer>
 
 
     </body> 
