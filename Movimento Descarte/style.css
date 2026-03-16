@@ -1,317 +1,132 @@
-/* ==========================================================================
-   1. GLOBAIS E CONFIGURAÇÕES BASE
-   ========================================================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-
-/* faz a pagina deslizar suavemente quando clica num link do menu */
-html {
-    scroll-behavior: smooth;
-    /* evita que a barra preta do menu cubra o titulo das secoes quando rolar */
-    scroll-padding-top: 80px; 
-}
-
+/* GERAL */
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f8f9fa;
-    color: #212529;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-
-/* ==========================================================================
-   2. NAVBAR (CABEÇALHO PRINCIPAL)
-   ========================================================================== */
-
-.custom-navbar {
-    background-color: #121212;
-    padding: 15px 0;
+/* NAVBAR */
+#menu {
+    border-bottom: 2px solid #ddd;
 }
 
-/* estilizando a logo para nao ficar gigante */
-.logo-img {
-    max-height: 50px; 
-    width: auto; 
-    transition: 0.3s ease;
+#menu .navbar-brand img {
+    height: 40px;
 }
 
-/* hover pra escurecer levemente a logo quando passa o mouse */
-.logo-img:hover {
-    opacity: 0.8;
+#menu .nav-link {
+    color: #333;
+    font-weight: bold;
+    margin-left: 10px;
 }
 
-.nav-link {
-    color: #f8f9fa !important;
-    margin-left: 15px;
-    font-size: 0.9rem;
-    transition: 0.3s ease;
+#menu .nav-link:hover {
+    color: #198754; /* Verde sucesso do Bootstrap */
 }
 
-.nav-link:hover {
-    color: #00ff88 !important;
+/* BANNER PRINCIPAL */
+#banner {
+    background-color: #fff;
+    padding: 50px 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
 }
 
-/* borda no ultimo botao pra chamar atenção e virar um "call to action" */
-.btn-sugerir {
-    border: 1px solid #00ff88;
-    border-radius: 4px;
-    padding: 5px 15px !important;
+#banner h1 {
+    font-size: 2.5em;
+    color: #222;
 }
 
-
-/* ==========================================================================
-   3. HERO SECTION (VÍDEO DE FUNDO E TEXTO PRINCIPAL)
-   ========================================================================== */
-
-/* conteiner principal do video */
-.hero-video-section {
-    position: relative;
-    width: 100%;
-    height: 75vh; 
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 0; /* zerado pq tiramos a barra de busca flutuante */
+/* MAPA E LISTA */
+#mapa {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
 }
 
-/* configuracao do video pra cobrir tudo sem amassar */
-#bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 1;
-    object-fit: cover;
+#mapa .card {
+    border-left: 5px solid #198754; /* Detalhe verde pra indicar que é ecoponto */
 }
 
-/* pelicula escura em cima do video */
-.video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(18, 18, 18, 0.75); 
-    z-index: 2;
-}
-
-/* o texto flutuando na frente do video */
-.hero-content {
-    position: relative;
-    z-index: 3;
-    color: #ffffff;
-}
-
-.hero-content h1 {
-    font-weight: 800;
-    font-size: 3.5rem;
-    line-height: 1.1;
-    letter-spacing: -1px;
-}
-
-.hero-content p {
-    color: #e9ecef;
-    font-size: 1.15rem;
-}
-
-/* botao verde neon de destaque */
-.custom-btn {
-    background-color: #00ff88;
-    color: #121212;
-    border: none;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-
-.custom-btn:hover {
-    background-color: #00cc6a;
-    color: #121212;
-    transform: translateY(-2px); 
-}
-
-
-/* ==========================================================================
-   4. SEÇÃO DO MAPA DE COLETA
-   ========================================================================== */
-
-.map-section {
-    background-color: #f8f9fa; /* cinza clarinho pra dar contraste com o video */
-    color: #212529;
-}
-
-.section-title {
-    font-weight: 800;
-    letter-spacing: -1px;
-    color: #121212;
-}
-
-.text-success-neon {
-    color: #00b35f; /* verde ligeiramente mais escuro pra ler bem no fundo branco */
-    font-weight: 700;
-}
-
-/* lista rolável dos ecopontos (lado esquerdo do mapa) */
-.locations-list {
-    max-height: 450px;
-    overflow-y: auto;
-    padding-right: 10px;
-}
-
-/* barra de rolagem customizada da lista */
-.locations-list::-webkit-scrollbar {
-    width: 6px;
-}
-.locations-list::-webkit-scrollbar-thumb {
-    background-color: #ccc;
+#mapa iframe {
+    border: 1px solid #ccc !important;
     border-radius: 4px;
 }
 
-/* cards de cada local na lista */
-.location-card {
+/* SEÇÃO DE RISCOS */
+#risco {
+    background-color: #222;
+    color: #fff;
+    padding: 50px 20px;
+    border-radius: 8px;
+}
+
+#risco .card {
+    background-color: #333;
+    color: #fff;
     border: none;
-    border-left: 4px solid #00cc6a; /* detalhe verde na lateral */
-    transition: 0.3s ease;
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    cursor: pointer;
-}
-
-.location-card:hover {
-    transform: translateX(5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-}
-
-/* conteiner que segura o iframe do google maps */
-.map-container {
-    border-radius: 12px;
-    overflow: hidden;
     height: 100%;
 }
-/* ==========================================================================
-   5. SEÇÃO DE RISCOS E EMBALAGEM
-   ========================================================================== */
 
-.risks-section {
-    background-color: #121212; /* voltando pro fundo escuro */
-    color: #ffffff;
+#risco h2 {
+    color: #fff;
 }
 
-.risks-section .section-title {
-    color: #ffffff; /* forca o titulo a ficar branco aqui */
+#risco .card h4 {
+    color: #198754; /* Titulo verde dentro do card escuro */
 }
 
-/* cards com efeitinho de levantar quando passa o mouse */
-.risk-card {
-    background-color: #1a1a1a;
-    border: 1px solid #2a2a2a;
-    border-radius: 12px;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+/* FORMULÁRIO DE CONTATO */
+#contato {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
 }
 
-.risk-card:hover {
-    transform: translateY(-10px);
-    border-color: #00ff88;
+#contato form {
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza o formulário */
 }
 
-.text-light-gray {
-    color: #adb5bd;
-    font-size: 0.95rem;
-    line-height: 1.6;
+/* RODAPÉ */
+#rodape {
+    font-size: 14px;
 }
 
-.icon-text {
-    color: #555;
-    font-weight: 800;
-    letter-spacing: 2px;
-    font-size: 0.85rem;
+#rodape a {
+    text-decoration: underline;
 }
 
-.package-banner {
-    background: linear-gradient(135deg, #1a1a1a 0%, #0d2b1a 100%);
-    border-radius: 12px;
-}
-/* ==========================================================================
-   6. SEÇÃO DE FORMULÁRIO E RODAPÉ
-   ========================================================================== */
-
-/* fundo claro pra voltar pro efeito zebra */
-.contact-section {
-    background-color: #f8f9fa; 
-    color: #212529;
-}
-
-/* card flutuante do formulario */
-.form-card {
-    border: none;
-    border-radius: 12px;
-    background-color: #ffffff;
-}
-
-/* estilizando os inputs pra nao ficarem com a cara padrao do navegador */
-.form-control, .form-select {
-    background-color: #f1f3f5;
-    border: 1px solid #dee2e6;
-    border-radius: 6px;
-    padding: 10px 15px;
-}
-
-/* borda verde quando clica pra digitar */
-.form-control:focus, .form-select:focus {
-    border-color: #00ff88;
-    box-shadow: 0 0 0 0.2rem rgba(0, 255, 136, 0.25);
-    background-color: #ffffff;
-}
-
-.form-label {
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: #495057;
-}
-
-/* rodape escuro pra dar um peso no final da pagina */
-.footer-section {
-    background-color: #121212;
-    color: #adb5bd;
-}
-
-/* ==========================================================================
-   7. PAINEL ADMINISTRATIVO
-   ========================================================================== */
-
-.admin-body {
-    background-color: #f4f6f9;
-    overflow-x: hidden;
-}
-
+/* AREA DO ADMIN (PAINEL) */
 #wrapper {
+    display: flex;
     min-height: 100vh;
 }
 
-.sidebar-dark {
-    min-width: 250px;
-    max-width: 250px;
-    background-color: #121212;
-    border-right: 1px solid #2a2a2a;
+.sidebar {
+    width: 250px;
+    background-color: #222;
+    color: #fff;
+    padding-top: 20px;
 }
 
-.sidebar-dark .list-group-item {
-    border: none;
-    padding: 15px 25px;
-    transition: 0.3s ease;
+.sidebar a {
+    display: block;
+    color: #ccc;
+    padding: 15px 20px;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
 }
 
-.sidebar-dark .list-group-item:hover {
-    background-color: #1a1a1a;
-    color: #00ff88 !important;
-    padding-left: 30px; 
+.sidebar a:hover, .sidebar a.ativo {
+    background-color: #198754;
+    color: #fff;
 }
 
-.active-link {
-    border-left: 4px solid #00ff88 !important;
-    background-color: #1a1a1a !important;
-    color: #00ff88 !important;
+.conteudo-admin {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #f9f9f9;
 }
