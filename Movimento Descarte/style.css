@@ -11,7 +11,9 @@ body {
 }
 
 #menu .navbar-brand img {
-    height: 40px;
+    height: 50px;
+    width: 80px;
+
 }
 
 #menu .nav-link {
@@ -27,13 +29,13 @@ body {
 /* BANNER PRINCIPAL */
 #banner {
     background-color: #fff;
-    padding: 50px 20px;
+    padding: 70px 20px;
     border-radius: 8px;
     border: 1px solid #ddd;
 }
 
 #banner h1 {
-    font-size: 2.5em;
+    font-size: 2.5;
     color: #222;
 }
 
@@ -46,11 +48,11 @@ body {
 }
 
 #mapa .card {
-    border-left: 5px solid #198754; /* Detalhe verde pra indicar que é ecoponto */
+    border-left: 5px solid #198754; 
 }
 
 #mapa iframe {
-    border: 1px solid #ccc !important;
+    border: 1px solid #ccc;
     border-radius: 4px;
 }
 
@@ -74,7 +76,7 @@ body {
 }
 
 #risco .card h4 {
-    color: #198754; /* Titulo verde dentro do card escuro */
+    color: #198754; 
 }
 
 /* FORMULÁRIO DE CONTATO */
@@ -87,7 +89,7 @@ body {
 
 #contato form {
     max-width: 600px;
-    margin: 0 auto; /* Centraliza o formulário */
+    margin: 0 auto; 
 }
 
 /* RODAPÉ */
@@ -118,11 +120,6 @@ body {
     padding: 15px 20px;
     text-decoration: none;
     border-bottom: 1px solid #444;
-}
-
-.sidebar a:hover, .sidebar a.ativo {
-    background-color: #198754;
-    color: #fff;
 }
 
 .conteudo-admin {
