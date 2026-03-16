@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movimento Descarte Correto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="menu" class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+            <a class="navbar-brand">
+                <img src="logo.png" alt="Logo da MDC" width="150">
+            </a>
+            
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="#mapa">Mapa de coleta</a></li>
+                <li class="nav-item"><a class="nav-link" href="#risco">Riscos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contato">Sugerir local</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="banner" class="container text-center mt-5 mb-5">
+        <h1><strong>O lixo eletrônico não desaparece.<p>Ele contamina.</p> </strong></h1>
+        <p>Pilhas e placas não pertencem ao lixo comum. Encontre o ponto de descarte agora.</p>
+        <a href="#mapa" class="btn btn-success mt-3">Encontrar Ponto de Coleta</a>
+    </div>
+
+    <div id="mapa" class="container mt-5">
+        <h2>Encontre um Ponto de Coleta</h2>
+        <p>Selecione um ecoponto no mapa ou na lista abaixo.</p>
+        
+        <div class="row mt-4">
+            <div class="col-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5>Ecoponto Centro</h5>
+                        <p>Rua das Palmeiras, 100 - Centro</p>
+                        <span class="badge bg-secondary">Pilhas</span>
+                        <span class="badge bg-secondary">Baterias</span>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5>Ecoponto Zona Norte</h5>
+                        <p>Rua Dona Francisca, 4500 - Santo Antônio</p>
+                        <span class="badge bg-secondary">Eletrônicos</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5>Ecoponto Sul</h5>
+                        <p>Rua Monsenhor Gercino, 2000 - Itaum</p>
+                        <span class="badge bg-secondary">Óleo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-8">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114312.3338528704!2d-48.92429672688414!3d-26.30452362088856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dea40713b9b4fb%3A0xc3b4cc35da9083f2!2sJoinville%2C%20SC!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="risco" class="container mt-5 mb-5 text-center">
+        <h2>Porque o seu lixo eletrônico não pode ir para a lixeira comum?</h2>
+        
+
+        <div class="row mt-4">
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Metais Pesados</h4>
+                        <p>Componentes contendo chumbo e mercúrio envenenam a terra e prejudicam o ecossistema.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Lençóis Freáticos</h4>
+                        <p>Os químicos vazam e atingem a água subterrânea que eventualmente chega às torneiras.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Danos ao Corpo</h4>
+                        <p>A inalação de gases tóxicos afeta diretamente os sistemas respiratório e nervoso.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contato" class="container mt-5 mb-5">
+        <h3 class="text-center">Fale com a gente</h3>
+        
+        <form class="mt-4">
+            <div class="mb-3">
+                <label>Seu nome completo</label>
+                <input type="text" class="form-control">
+            </div>
+            
+            <div class="mb-3">
+                <label>E-mail ou Telefone</label>
+                <input type="text" class="form-control">
+            </div>
+            
+            <div class="mb-3">
+                <label>Qual é o motivo do contato?</label>
+                <select class="form-select">
+                    <option>Escolha uma opção...</option>
+                    <option>Solicitar coleta</option>
+                    <option>Denunciar descarte irregular</option>
+                    <option>Sugerir local</option>
+                </select>
+            </div>
+            
+            <div class="mb-3">
+                <label>Descrição ou endereço</label>
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+            
+            <button type="button" class="btn btn-success w-100 mt-2">Enviar solicitação</button>
+        </form>
+    </div>
+
+    <div id="rodape" class="bg-dark text-white text-center p-4 mt-5">
+        <p>© 2026 Movimento Descarte Correto. Todos os direitos reservados.</p>
+        <a href="login.html" class="text-white">Entrar na área do ADM</a>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

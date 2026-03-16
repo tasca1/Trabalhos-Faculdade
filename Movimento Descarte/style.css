@@ -1,0 +1,129 @@
+/* GERAL */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* NAVBAR */
+#menu {
+    border-bottom: 2px solid #ddd;
+}
+
+#menu .navbar-brand img {
+    height: 50px;
+    width: 80px;
+
+}
+
+#menu .nav-link {
+    color: #333;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#menu .nav-link:hover {
+    color: #198754; 
+}
+
+/* BANNER PRINCIPAL */
+#banner {
+    background-color: #fff;
+    padding: 70px 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+#banner h1 {
+    font-size: 2.5;
+    color: #222;
+}
+
+/* MAPA E LISTA */
+#mapa {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+#mapa .card {
+    border-left: 5px solid #198754; 
+}
+
+#mapa iframe {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* SEÇÃO DE RISCOS */
+#risco {
+    background-color: #222;
+    color: #fff;
+    padding: 50px 20px;
+    border-radius: 8px;
+}
+
+#risco .card {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    height: 100%;
+}
+
+#risco h2 {
+    color: #fff;
+}
+
+#risco .card h4 {
+    color: #198754; 
+}
+
+/* FORMULÁRIO DE CONTATO */
+#contato {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+#contato form {
+    max-width: 600px;
+    margin: 0 auto; 
+}
+
+/* RODAPÉ */
+#rodape {
+    font-size: 14px;
+}
+
+#rodape a {
+    text-decoration: underline;
+}
+
+/* AREA DO ADMIN (PAINEL) */
+#wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #222;
+    color: #fff;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: #ccc;
+    padding: 15px 20px;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+}
+
+.conteudo-admin {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #f9f9f9;
+}
