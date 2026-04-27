@@ -1,13 +1,13 @@
 /* GERAL */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #6e6c6c;
     color: #333;
 }
 
 /* NAVBAR */
 #menu {
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #242323;
 }
 
 #menu .navbar-brand img {
@@ -58,7 +58,7 @@ body {
 
 /* SEÇÃO DE RISCOS */
 #risco {
-    background-color: #222;
+    background-color: #e6e6e6;
     color: #fff;
     padding: 50px 20px;
     border-radius: 8px;
