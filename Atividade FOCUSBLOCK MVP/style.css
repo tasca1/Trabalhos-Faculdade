@@ -1,0 +1,38 @@
+/* fonte geral da aplicação */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* cards de tarefa */
+.card-task {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-left: 5px solid #dee2e6;
+}
+
+/* status: cronômetro rodando*/
+.status-running {
+    border-left-color: #198754;
+    background-color: #f1fcf6;
+}
+
+/* status: cronômetro pausado */
+.status-paused {
+    border-left-color: #ffc107;
+}
+
+/* status: tarefa concluída */
+.status-completed {
+    border-left-color: #6c757d;
+    opacity: 0.7;
+}
+
+.status-completed h5 {
+    text-decoration: line-through;
+}
+
+/* relógio */
+.timer-display {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
