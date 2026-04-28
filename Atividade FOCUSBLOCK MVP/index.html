@@ -6,9 +6,7 @@
     <title>FocusBlock - Gestor de Tempo</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-light">
@@ -31,10 +29,15 @@
                 <div class="card shadow-sm border-0 mb-5">
                     <div class="card-body p-4">
                         <div class="input-group">
-                            <input type="text" id="taskInput" class="form-control form-control-lg" placeholder="Digite sua atividade aqui:" aria-label="Nova tarefa">
+                            <input type="text" id="taskInput" class="form-control form-control-lg" placeholder="Ex: Desenvolver nova feature..." aria-label="Nova tarefa">
                             <button class="btn btn-primary px-4" type="button" id="addTaskBtn">Criar Bloco</button>
                         </div>
                     </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-3 px-1">
+                    <h5 class="mb-0 fw-bold text-secondary">Suas Atividades</h5>
+                    <span class="badge bg-dark fs-6" id="totalTimeDisplay">Total: 00:00:00</span>
                 </div>
 
                 <div id="taskList">
@@ -48,7 +51,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
     <script src="script.js"></script>
 </body>
-</html> 
+</html>

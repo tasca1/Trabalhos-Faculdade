@@ -4,6 +4,7 @@ const taskinput=document.getElementById('taskInput');
 const addtaskbtn=document.getElementById('addTaskBtn');
 const tasklist=document.getElementById('taskList');
 const emptystate=document.getElementById('emptyState');
+const totaltimedisplay=document.getElementById('totalTimeDisplay');
 
 addtaskbtn.addEventListener('click',()=>{
   const desc=taskinput.value.trim();
@@ -19,6 +20,11 @@ function formattime(sec){
   const m=Math.floor((sec%3600)/60);
   const s=sec%60;
   return [h,m,s].map(v=>v<10?"0"+v:v).join(":");
+}
+
+function updatetotal(){
+  const totalsec=tasks.reduce((acc,t)=>acc+t.sec,0);
+  totaltimedisplay.innerText=`Total: ${formattime(totalsec)}`;
 }
 
 function toggletimer(id){
@@ -45,12 +51,17 @@ function startinterval(){
   intervalid=setInterval(()=>{
     let any=false;
     tasks.forEach(t=>{if(t.run){t.sec++;any=true;}});
-    if(!any){clearInterval(intervalid);intervalid=null;}
+    updatetotal();
+    if(!any){
+      clearInterval(intervalid);
+      intervalid=null;
+    }
     rendertasks();
   },1000);
 }
 
 function rendertasks(){
+  updatetotal();
   if(tasks.length===0){
     emptystate.style.display='block';
     tasklist.innerHTML='';
